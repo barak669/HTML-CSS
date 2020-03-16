@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Carter+One&display=swap");
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            background: #19c1f1;
+            background: linear-gradient(180deg, #19c1f1 0%, #59c9f4 35%, #afe7f2 100%);
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .head {
+            height: 330px;
+            width: 240px;
+            border: 2px solid black;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            background-color: BURLYWOOD;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .ears-container {
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            bottom: 60px;
+            z-index: 2;
+        }
+
+        .ears-container .ears {
+            height: 90px;
+            width: 80px;
+            border-radius: 50%;
+            border: 2px solid black;
+            background-color: #fff;
+            position: relative;
+            border-bottom: 1px solid transparent;
+            background-color: BURLYWOOD;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ears-container .ears:nth-child(1) {
+            transform: rotateZ(-30deg);
+        }
+
+        .ears-container .ears:nth-child(1) .ear-inner {
+            transform: rotate(210deg);
+        }
+
+        .ears-container .ears:nth-child(2) {
+            transform: rotateZ(30deg);
+        }
+
+        .ears-container .ears:nth-child(2) .ear-inner {
+            transform: rotate(-150deg);
+        }
+
+        .ears-container .ear-inner {
+            height: 55px;
+            width: 40px;
+            border: 2px solid black;
+            background-color: #ef9a9a;
+            border-radius: 0 50% 50% 50%;
+        }
+
+        .eyebrows-container {
+            width: 190px;
+            height: 30px;
+            position: absolute;
+            bottom: 85px;
+            left: 25px;
+            display: flex;
+            justify-content: space-around;
+            z-index: -1;
+        }
+
+        .eyebrows-container .eyebrow {
+            width: 5px;
+            height: 35px;
+            border: none;
+        }
+
+        .eyebrows-container .eyebrow:nth-child(1) {
+            transform: rotate(75deg);
+            border-right: 2px solid black;
+            border-radius: 100px 0 0 50px;
+        }
+
+        .eyebrows-container .eyebrow:nth-child(2) {
+            transform: rotate(-75deg);
+            border-left: 2px solid black;
+            border-radius: -100%;
+        }
+
+        .eyes-container {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            top: 30px;
+            z-index: 2;
+        }
+
+        .eyes-container .eye {
+            height: 85px;
+            width: 130px;
+            border-radius: 50%;
+            border: 12px solid #99700a;
+            box-shadow: 1px 1px 2px black;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .eyes-container .eye .pupil {
+            width: 17px;
+            height: 17px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        .eyes-container .bridge {
+            height: 10px;
+            width: 25px;
+            position: relative;
+            top: 10px;
+            background-color: #99700a;
+            align-self: center;
+        }
+
+        .nose-container {
+            width: 40px;
+            height: 30px;
+            position: relative;
+            top: 110px;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .nose-container .nostril {
+            width: 1px;
+            height: 15px;
+            margin: 12px;
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .nose-container .nostril:nth-child(1) {
+            transform: rotate(-60deg);
+        }
+
+        .nose-container .nostril:nth-child(2) {
+            transform: rotate(60deg);
+        }
+
+        .mouth-container {
+            width: 55%;
+            height: 50px;
+            position: relative;
+            top: 85px;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .mouth-container .mouthcorner-container {
+            width: 120px;
+            height: 30px;
+            position: absolute;
+            bottom: 22px;
+            z-index: 3;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mouth-container .mouthcorner-container .mouth-corner {
+            width: 20px;
+            height: 10px;
+            border: none;
+            border-bottom: 2px solid black;
+            background-color: BURLYWOOD;
+            border-radius: 30px;
+        }
+
+        .mouth-container .mouthcorner-container .mouth-corner:nth-child(1) {
+            transform: rotate(-40deg);
+        }
+
+        .mouth-container .mouthcorner-container .mouth-corner:nth-child(2) {
+            transform: rotate(40deg);
+        }
+
+        .mouth-container .mouth {
+            width: 90px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-color: #c62828;
+            border: 2px solid black;
+            border-top: none;
+            border-bottom-left-radius: 80px;
+            border-bottom-right-radius: 80px;
+            overflow: hidden;
+        }
+
+        .mouth-container .mouth:before {
+            content: "";
+            width: 95px;
+            height: 35px;
+            border-bottom-left-radius: 174px;
+            border-bottom-right-radius: 174px;
+            border-bottom: 2px solid black;
+            position: absolute;
+            bottom: 20px;
+            left: 19px;
+            background-color: BURLYWOOD;
+        }
+
+        .mouth-container .mouth .tongue {
+            width: 50px;
+            height: 15px;
+            border-top-left-radius: 110px;
+            border-top-right-radius: 110px;
+            border: 2px solid black;
+            border-bottom: none;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="head">
+            <div class="ears-container">
+                <div class="ears">
+                    <div class="ear-inner"></div>
+                </div>
+                <div class="ears">
+                    <div class="ear-inner"></div>
+                </div>
+            </div>
+
+            <div class="eyes-container">
+                <div class="eyebrows-container">
+                    <div class="eyebrow"></div>
+                    <div class="eyebrow"></div>
+                </div>
+                <div class="eye">
+                    <div class="pupil"></div>
+                </div>
+                <div class="bridge"></div>
+                <div class="eye">
+                    <div class="pupil"></div>
+                </div>
+            </div>
+            <div class="nose-container">
+                <div class="nostril"></div>
+                <div class="nostril"></div>
+            </div>
+            <div class="mouth-container">
+                <div class="mouthcorner-container">
+                    <div class="mouth-corner"></div>
+                    <div class="mouth-corner"></div>
+                </div>
+                <div class="mouth">
+                    <div class="tongue"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

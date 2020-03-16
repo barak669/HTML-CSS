@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+
+    <style>
+        .row>div {
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: xx-large;
+        }
+        .row>div:nth-child(1) {
+            background-color: red;
+        }
+        .row>div:nth-child(2) {
+            background-color: green;
+        }
+        .row>div:nth-child(3) {
+            background-color: blue;
+        }
+        .row>div:nth-child(4) {
+            background-color: yellow;
+        }
+    
+        .row>div:nth-child(5) {
+            background-color: black;
+        }
+    
+        .row>div:nth-child(6) {
+            background-color: gray;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-6">A</div>
+        <div class="col-sm-3 col-md-6">B</div>
+        <div class="col-sm-3 col-md-6">C</div>
+        <div class="col-sm-3 col-md-6 d-none d-sm-block">D</div>
+        <div class="col-sm-3 col-md-6 d-none d-md-block">E</div>
+        <div class="col-sm-3 col-md-6 d-none d-md-block">F</div>
+      </div>
+    </div>
+  </body>
+</html>

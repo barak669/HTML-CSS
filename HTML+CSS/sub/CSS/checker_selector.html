@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        :nth-child(1)+label+input+label+p {
+            display: none;
+        }
+
+        :nth-child(1):checked+label+input+label+p {
+            display: block;
+        }
+        :nth-child(3)+label+p+p {
+            display: none;
+        }
+
+        :nth-child(3):checked+label+p+p {
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <input type="radio" name="a" id="c"/><label>cat</label>
+    <input type="radio" name="a" id="d"/><label>dog</label>
+    <p>bob the cat</p>
+    <p>alice the dog</p>
+</body>
+
+</html>

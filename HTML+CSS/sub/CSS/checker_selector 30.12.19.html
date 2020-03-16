@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #wrapper {
+            border: 1px solid black;
+            width: 100%;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-box-align: stretch ;
+        }
+
+        .column {
+            -webkit-box-ordinal-group: 2;
+            -webkit-box-flex: 1;
+        }
+
+        .test {
+            -webkit-box-ordinal-group: 1;
+        }
+
+        input:checked+label+p {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <input type="radio" name="a" class="test" /><label>cat</label>
+
+        <p class="column">bob the cat</p>
+
+        <input type="radio" name="a" class="test" /><label>dog</label>
+
+        <p class="column">alice the dog</p>
+    </div>
+</body>
+
+</html>
